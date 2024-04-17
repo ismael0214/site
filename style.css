@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 400px;
+    overflow: hidden;
+    /*background-color: #fe6c6d;*/
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #1f0d37;
+}
+
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 110px;
+    padding: 0 5%;
+    color: #fff;
+    font-size: 18px;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav .menu {
+    display: flex;
+    align-items: center;
+}
+
+header nav .menu li a {
+    position: relative;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 40px;
+    border-radius: 0.4rem;
+    transition: color 0.4s ease;
+}
+
+header nav .menu li a:hover {
+    color: #fe6c6d;
+}
+
+header nav #toggle {
+    font-size: 1.3rem;
+    margin-left: 80px;
+    cursor: pointer;
+}
+
+.home {
+    padding: 0.5%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.home h1 {
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-size: 6.25rem;
+    font-weight: 600;
+}
+
+.home p {
+    font-size: 2.85rem;
+    width: 600px;
+    font-weight: 300;
+    margin: -5px auto 25px;
+    text-align: center;
+}
+
+
+.home button {
+    background: #1f0d37;
+    padding: 0.3rem 1.5rem;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.home button:hover {
+    background: transparent;
+    border-color: #1f0d37;
+    color: #1f0d37;
+
+}
+
+.home .images .img-1,
+.home .images .img-2,
+.home .images .img-3,
+.home .images .img-4,
+.home .images .img-5,
+.home .images .img-6,
+.home .images .img-7 {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.home .images .img-1 {
+    background: url(img_1.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.home .images .img-2 {
+    background: url(img_2.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.home .images .img-3 {
+    background: url(img_3.PNG);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.home .images .img-4 {
+    background: url(img_4.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.home .images .img-5 {
+    background: url(img_5.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.home .images .img-6 {
+    background: url(img_6.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.home .images .img-7 {
+    background: url(img_7.png);
+    background-position: center;
+    background-size: cover;
+
+}
+
+@media (max-width:800px) {
+    .home {
+        min-width: 390px;
+    }
+
+    .home h1 {
+        font-size: 1.65rem;
+        font-weight: 700;
+    }
+
+    .home p {
+        font-size: 0.6rem;
+        width: 320px;
+        font-weight: 300;
+        margin: 0 auto 20px;
+    }
+
+    .home button {
+        padding: 0.25rem 1.10rem;
+        font-size: 0.75rem;
+    }
+
+    header nav .menu {
+        flex-direction: column;
+        row-gap: 2rem;
+        position: absolute;
+        left: -100%;
+        top: 110px;
+        width: 100%;
+        padding-top: 90px;
+        background: #1f0d37;
+        height: calc(100vh - 110px);
+        z-index: 10;
+        transition: left 0.4s ease;
+    }
+
+    header nav .menu.active {
+        left: 0;
+    }
+
+    header nav .menu li a {
+        margin-left: unset;
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        width: 250px;
+        height: 60px;
+        line-height: 60px;
+        display: block;
+        text-align: center;
+        border-radius: 5px;
+        transition: 0.25s ease;
+
+    }
+
+    header nav .menu li a:hover {
+        background: #fff;
+        color: #1f0d37;
+
+    }
+
+}

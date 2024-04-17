@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <title>BLIBLIOTECA</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+
+    </div>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="leyendas.html">Leyendas</a></li>
+        <li><a href="poemas.html">Poemas</a></li>
+        <li><a href="cuentos.html">Cuentos</a></li>
+        <li><a href="novelas.html">Novelas</a></li>
+
+      </ul>
+      <i class="fa-solid fa-bars" id="toggle"></i>
+    </nav>
+  </header>
+
+  <section class="home">
+    <div class="home-content">
+      <h1>BIBLIOTECA VIRTUAL</h1>
+      <p>Bienvenidos </p>
+
+    </div>
+    <div class="images">
+      <div class="img-1"></div>
+      <div class="img-2"></div>
+      <div class="img-3"></div>
+      <div class="img-4"></div>
+      <div class="img-5"></div>
+      <div class="img-6"></div>
+      <div class="img-7"></div>
+    </div>
+  </section>
+  <script>
+    gsap.from('.img-3', 1.2, { opacity: 0, y: -150, delay: 0.5 })
+    gsap.from('.img-4', 1.2, { opacity: 0, y: 150, delay: 2.5 })
+    gsap.from('.img-2', 1.2, { opacity: 0, y: 150, delay: 3 })
+    gsap.from('.img-5', 1.2, { opacity: 0, y: 150, delay: 2 })
+    gsap.from('.img-6', 1.2, { opacity: 0, y: 150, delay: 1.5 })
+    gsap.from('.img-7', 1.2, { opacity: 0, y: 150, delay: 1 })
+    gsap.from('h1', 1.2, { opacity: 0, y: -80, delay: 3.5 })
+    gsap.from('p', 1.2, { opacity: 0, y: -80, delay: 3.8 })
+    gsap.from('button', 1.2, { opacity: 0, y: -80, delay: 4.1 })
+
+    const menu = document.querySelector('.menu');
+    const toggle = document.getElementById('toggle');
+
+    toggle.onclick = function () {
+      menu.classList.toggle('active');
+    }
+  </script>
+
+</body>
+
+</html>
